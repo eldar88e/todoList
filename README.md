@@ -5,4 +5,4 @@ native JavaScript
 
 css: materializecss https://materializecss.com/
 
-for lock https://todo.solncevdome.net/
+To view the project follow the link: https://todo.solncevdome.net/
