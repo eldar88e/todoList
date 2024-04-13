@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html data-page="construction" data-version="1.27.0">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+        <link rel="stylesheet" href="/assets/css/materialize.min.css" type="text/css">
+        <script src="/assets/js/main.js"></script>
+        <script src="/assets/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="icon" type="image/png" href="/favicon.ico">
+        <title>ToDo List</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>ToDo List</h1>
+            <form id="add-do">
+                <div class="row">
+                    <div class="col s10 m10 l11">
+                        <div class="input-field">
+                            <input type="text" id="userInput" name="userInput" value="" class="form-control required">
+                            <label for="userInput">Enter a task:</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col s2 m2 l1" style="text-align: right;">
+                        <button class="btn btn-floating btn-large waves-effect waves-light red" data-type="success">
+                            <i class="material-icons">add</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        
+            <ol id="output" class="collection"></ol>
+            
+            <button id="clear" class="btn">Clear</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+.collection li {
+    cursor: pointer;
+}
+
+.collection li.decoration span {
+    text-decoration: line-through;
+}
+
+.collection li .task {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collection li .btns {
+}
