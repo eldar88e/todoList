@@ -11,7 +11,7 @@ function ListenLi(event, toDoList) {
         let btn    = (targetBtn.dataset.type === 'success') ? targetBtn : targetBtn.parentElement;
         let idx    = parseFloat(parent.dataset.index);
         btn.classList.toggle('orange');
-        toDoList[idx].status = (toDoList[idx].status) ? false : true;
+        toDoList[idx].status = !toDoList[idx].status;
         localStorage.setItem('user', JSON.stringify(toDoList));
         parent.classList.toggle('decoration');
     }
