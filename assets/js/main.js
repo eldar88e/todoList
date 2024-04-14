@@ -1,18 +1,18 @@
 function removeTask(parent, idx, toDoList) {
     toDoList.splice(idx, 1);
-    localStorage.setItem('user', JSON.stringify(toDoList));
+    localStorage.setItem('todolist', JSON.stringify(toDoList));
     parent.remove();
 }
 
 function toggleTaskStatus(parent, idx, btn, toDoList) {
     btn.classList.toggle('orange');
     toDoList[idx].status = !toDoList[idx].status;
-    localStorage.setItem('user', JSON.stringify(toDoList));
+    localStorage.setItem('todolist', JSON.stringify(toDoList));
     parent.classList.toggle('decoration');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    let toDoList  = JSON.parse(localStorage.getItem('user')) || [];
+    let toDoList  = JSON.parse(localStorage.getItem('todolist')) || [];
     let outputDiv = document.getElementById('output');
     
     document.getElementById('add-do').addEventListener('submit', function(event) {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         let newTask = { do: userInput, status: false }; 
         toDoList.push(newTask);
-        localStorage.setItem('user', JSON.stringify(toDoList));
+        localStorage.setItem('todolist', JSON.stringify(toDoList));
         let idx = toDoList.length - 1;
         outputDiv.innerHTML += addTask(newTask, idx);
         document.dispatchEvent(customEvent);
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('clear').addEventListener('click', function() {
         outputDiv.innerHTML = '';
         toDoList = [];
-        localStorage.setItem('user', JSON.stringify(toDoList));
+        localStorage.setItem('todolist', JSON.stringify(toDoList));
     });
 
     toDoList.forEach(function(item, idx) {
