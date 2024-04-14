@@ -2,7 +2,7 @@
     cursor: pointer;
 }
 
-.collection li.decoration span {
+.collection li.decoration .task .title {
     text-decoration: line-through;
 }
 
